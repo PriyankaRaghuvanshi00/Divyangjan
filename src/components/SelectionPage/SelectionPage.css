@@ -1,0 +1,43 @@
+.SelectionPageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+
+}
+
+.h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(124, 207, 243);
+}
+
+.optionContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:760px) {
+  .container {
+    background-color: black;
+    height: fit-content;
+  }
+
+  .h2 {
+    font-size: 20px;
+  }
+
+  .optionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

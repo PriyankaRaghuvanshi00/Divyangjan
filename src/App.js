@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPage from './components/mainPage/mainPage';
+import SelectionPage from './components/SelectionPage/SelectionPage';
+import SplashScreen from './components/splashScreen/splashScreen'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+  setTimeout(function () {
+    document.getElementById("SA").style.display = "none";
+    if (document.getElementById("hints"))
+      document.getElementById("hints").style.display = "flex";
+  }, 2600)
+  return <>
+    <Router>
+      <SplashScreen></SplashScreen>
+      <Route path='/type/:name' exact><MainPage /></Route>
+      <Route path='/' exact><SelectionPage /></Route>
+    </Router>
+  </>
+
+
 }
-
-export default App;

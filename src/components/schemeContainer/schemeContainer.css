@@ -1,0 +1,48 @@
+.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+   transition: 0.3s;
+   width: 40%;
+   margin: 10px;
+   border-radius: 15px;
+   background-color: rgba(165, 165, 147, 0.553);
+}
+
+.title {
+   font-size: 16px;
+   color: rgb(254, 18, 18);
+   font-weight: 600;
+}
+
+.discrib {
+   font-size: 14px;
+   font-weight: 700;
+   font-style: italic;
+   color: 'black',
+}
+
+.brief {
+   font-style: italic;
+   font-size: 12px;
+   font-weight: 600;
+   color: rgba(41, 31, 31, 0.973);
+}
+
+.card:hover {
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+   padding: 2px 16px;
+   margin: 10px;
+}
+
+.info {
+   font-size: 15px;
+   font-weight: 400;
+
+
+}
