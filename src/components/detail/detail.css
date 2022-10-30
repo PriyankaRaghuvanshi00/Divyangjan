@@ -1,3 +1,24 @@
+.detail {
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.detailPageText {
+   width: 100%;
+   height: 85vh;
+   position: absolute;
+   top: 50px;
+   border: 1px solid green;
+}
+
+.images {
+   width: 88%;
+   height: 70%;
+   margin-top: 20px;
+}
+
 .course {
    background-color: #fff;
    border-radius: 10px;
@@ -8,6 +29,7 @@
    overflow: hidden;
    width: 700px;
 }
+
 
 .course h6 {
    opacity: 0.6;

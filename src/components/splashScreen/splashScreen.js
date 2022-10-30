@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import Banner from '../banner/banner'
+import Header from '../header/header'
 import "./splashScreen.css"
 export default function SplashScreen() {
     const message = 'Hello There!  Welcome To the Divyangjan '
@@ -9,11 +11,12 @@ export default function SplashScreen() {
     }, [])
 
     return (
-        <div className="splashhArea" id="SA">
-            <span className="splashh path ">Sahara</span>
-            <span className="splashh finding">for</span>
-            <span className="splashh viz">Divyangjan</span>
-        </div >
+        <div className="welcome" id='SA'>
+            <span id="splash-overlay" className="splash"></span>
+            <span id="welcome" className="z-depth-4"></span>
+            <Banner />
+            <Header color={'rgba(0, 0, 0, 0.491)'} />
+        </div>
     )
 }
 

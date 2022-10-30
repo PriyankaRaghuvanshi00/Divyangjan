@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useState } from 'react'
 import './mainPage.css'
 import SchemeContainer from '../schemeContainer/schemeContainer'
 import axios from 'axios';
+import Header from '../header/header';
 export default function MainPage() {
    const [schemes, setSheme] = useState([]);
    const [message, setMessages] = useState([]);
@@ -43,10 +44,13 @@ export default function MainPage() {
 
    return (
       <div className='schemeContainer' >
-         {
-            schemes.length === 0 ? <p style={{ fontSize: '20px' }}>Sorry! No Schemes Available 😢  </p> : schemes?.map(elem => <SchemeContainer title={elem.scheme_title} info={elem.scheme_info} image={elem.image} brief={elem.brief} />)
-         }
-         <button onClick={() => setStop(!stop)} style={{ position: 'absolute', top: '0px', width: '100px', height: '50px', left: '0px' }}>{stop ? 'Stop' : 'Start'}</button>
+         <Header color={'#512da8'} />
+         <div className='cardContainers'>
+            {
+               schemes.length === 0 ? <p style={{ fontSize: '20px' }}>Sorry! No Schemes Available 😢  </p> : schemes?.map(elem => <SchemeContainer title={elem.scheme_title} info={elem.scheme_info} image={elem.image} brief={elem.brief} />)
+            }
+         </div>
+         {/* <button onClick={() => setStop(!stop)} style={{ position: 'absolute', top: '0px', width: '100px', height: '50px', left: '0px' }}>{stop ? 'Stop' : 'Start'}</button> */}
       </div>
    )
 }

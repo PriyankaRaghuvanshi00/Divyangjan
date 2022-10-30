@@ -2,14 +2,27 @@ import React, { useEffect } from 'react'
 import './schemeContainer.css'
 
 export default function SchemeContainer({ title, info, image, brief }) {
+   const onClick = () => {
+      localStorage.setItem('title', title)
+      localStorage.setItem('info', info)
+      localStorage.setItem('image', image)
+      localStorage.setItem('brief', brief)
+      window.open('/detail', "_SELF")
+   }
    return (
-      <div className="card">
-         <img src={image} alt="Avatar" style={{ width: "80%", borderRadius: ' 8px', marginTop: '20px' }} />
-         <div className="container">
-            <h4><span className='discrib' >Scheme Name-</span> <b className='title'>{title}</b></h4>
-            <p className='brief'><span className='discrib'>By-</span>{brief}</p>
-            <p className='info'>{info}</p>
+      <div class="courses-container">
+         <div class="course">
+            <div class="course-preview">
+               <h6>Name</h6>
+               <h2>{title}</h2>
+            </div>
+            <div class="course-info">
+               <h6>Information</h6>
+               <h4>{info}</h4>
+               <div class="continueBtn" onClick={onClick}>Continue Reading</div>
+            </div>
          </div>
       </div>
+
    );
 }

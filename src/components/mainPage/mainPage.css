@@ -14,3 +14,14 @@
 .gap {
    height: 200px;
 }
+
+.cardContainers {
+   width: 100%;
+   display: flex;
+   position: relative;
+   top: 70px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   left: 0;
+}

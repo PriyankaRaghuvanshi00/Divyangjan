@@ -1,13 +1,19 @@
 import React from 'react'
 import { Route } from 'react-router';
 import { Link, NavLink } from 'react-router-dom';
-import styles from '../../styles/optionPageCard.module.css'
-
-export default function OptionPageCard({ name, image, setType }) {
+import './style.css'
+export default function OptionPageCard({ index, intro, name, image, setType }) {
    return (
-      <NavLink style={{ textDecoration: 'none' }} to={`/type/${name}`}>
-         < div className={styles.card} style={{ backgroundImage: `url('../image/deaf.png')` }}>
-            <p className={styles.p}>{name}</p>
+      <NavLink to={`/type/${name}`}>
+         <div class="CardContainer" onClick={() => { setType(name); window.open(`/type/${name}`) }}>
+            <div class="card">
+               <div class="box">
+                  <div class="content">
+                     <h3>{name}</h3>
+                     <p>{intro}</p>
+                  </div>
+               </div>
+            </div>
          </div >
       </NavLink>
    )
